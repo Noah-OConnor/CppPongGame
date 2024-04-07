@@ -181,9 +181,10 @@ public:
 
 	void Draw()
 	{
+		string wall = "\xDB";
 		for (int i = 0; i < screenWidth + 2; i++)
 		{
-			cout << "\xB2";
+			cout << wall; // top wall
 		}
 		cout << endl;
 
@@ -199,7 +200,7 @@ public:
 				int player2y = player2Ptr->getPaddleY();
 
 				if (j == 0)
-					cout << "\xB2";
+					cout << wall; // left wall
 
 				if (ballx == j && bally == i)
 					cout << "O"; // ball
@@ -225,14 +226,14 @@ public:
 					cout << " ";
 
 				if (j == screenWidth - 1)
-					cout << "\xB2";
+					cout << wall; // right wall
 			}
 			cout << endl;
 		}
 
 		for (int i = 0; i < screenWidth + 2; i++)
 		{
-			cout << "\xB2";
+			cout << wall; // bottom wall
 		}
 		cout << endl;
 
